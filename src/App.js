@@ -1,6 +1,7 @@
 import React from "react";
 
 import Expenses from "./components/Expenses/Expenses";
+// import ExpensesFilter from "./components/ExpensesFilter/ExpensesFilter";
 import NewExopense from "./components/NewExpense/NewExpense";
 
 const App = () => {
@@ -44,7 +45,8 @@ const App = () => {
 
   return (
     <div>
-      <NewExopense onAddExpense = {addExpensehandler} />
+      {/* <ExpensesFilter/> */}
+      <NewExopense onAddExpense={addExpensehandler} />
       <Expenses items={expenses} />
     </div>
   );

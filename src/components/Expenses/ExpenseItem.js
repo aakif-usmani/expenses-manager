@@ -7,13 +7,13 @@ import "./ExpenseItem.css";
 
 
 const ExpenseItem = (props) => {
+  console.log("ExpenseItem evaluated by react");
   const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
     setTitle("updated!!!!!");
     console.log(props.title);
   };
-
 
   return (
     <Card className="expense-item">
@@ -22,8 +22,8 @@ const ExpenseItem = (props) => {
         <h2>{title}</h2>
         <div className="expense-item__price">Rs={props.amount}/-</div>
       </div>
-     <ButtonX clickHandler={clickHandler}/>
-     
+      <ButtonX clickHandler={clickHandler} />
+
     </Card>
   );
 };
