@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Card from "../UI/Card";
 import ButtonX from "./Button";
-
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 
 const ExpenseItem = (props) => {
-  console.log("ExpenseItem evaluated by react");
+
+  console.log("ExpenseItem evaluated by react" + props.title);
   const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
