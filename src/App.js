@@ -1,10 +1,7 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
-
 import Expenses from "./components/Expenses/Expenses";
-// import ExpensesFilter from "./components/ExpensesFilter/ExpensesFilter";
 import NewExopense from "./components/NewExpense/NewExpense";
-
 
 const DUMMY_ESPENSES = [
   {
@@ -32,36 +29,22 @@ const DUMMY_ESPENSES = [
     date: new Date(2021, 5, 12),
   },
 ];
-
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_ESPENSES);
-
-  const addExpensehandler = expense => {
-    setExpenses(prevExpenses => {
-      return [expense, ...prevExpenses]
+  const addExpensehandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
     });
-  }
-
-
-  // return React.createElement(
-  //   "div",
-  //   {},
-  //   React.createElement("h2", {}, "Let's get started!"),
-  //   React.createElement(Expenses, { items: expenses })
-  // )
-
-  // const addExpensehandler = expense => {
-  //   console.log("In app.js")
-  //   console.log(expense)
-  // }
+  };
 
   return (
     <div>
       {/* <ExpensesFilter/> */}
+      {/* <HideForm /> */}
       <NewExopense onAddExpense={addExpensehandler} />
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;
